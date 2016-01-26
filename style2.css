@@ -1,0 +1,75 @@
+.header{
+    width: 100%;
+    height: auto;
+    /*background: #e0f5ff; FOR BLUE HEADER*/
+    background: #e3e3e3;
+    padding-top: 24px;
+}
+
+.headerContent{
+    width: 1024px;
+    height: auto;
+    margin: auto;
+}
+
+.headerBreak {
+    width: 100%;
+    height: 0;
+    /*border-bottom: 4px solid #75cdff; FOR BLUE HEADER*/
+    border-bottom: 4px solid #bd3a3a;
+}
+
+.nav {
+    margin-top: 20px;
+    height: 39px;
+    /*background: #75cdff; FOR BLUE HEADER*/
+    background: #bd3a3a
+}
+.nav ul {
+    margin: 0px 0px 0px 50px;
+    padding: 0;
+}
+.nav ul li {
+    list-style: none;
+}
+.nav ul li a {
+    text-decoration: none;
+    float: left;
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    
+}
+.nav ul li a:hover{
+    /*background: #118fcf; FOR BLUE HEADER*/
+    background: #8c0e0e;
+    /*color: white;*/
+}
+
+.body {
+    margin: 20px 225px;
+}
+/*
+.outercontainer{
+    float:left;   
+}
+
+.innercontainer{
+    width: 700px;
+    float:left;
+    align-content: center;
+    padding: 10px;
+}*/
+
+.body a{
+    text-decoration: none;
+}
+
+.body a:hover{
+    text-decoration: none;
+    color:#bd3a3a;
+}
+
+.footer {
+    margin: 75px; 500 px;
+}

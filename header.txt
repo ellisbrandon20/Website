@@ -1,0 +1,21 @@
+header images
+
+800 w
+200 h
+
+color:
+
+background= e0f5ff
+text = 67c3eb
+shadow of text = a5d2f0
+font: Candara (bold and Italic)
+size 50:
+
+
+header 2
+
+color:
+back = e3e3e3
+text = bd3a3a
+shadow = bd3a3a
+opacity 44, distance 6, size 0
