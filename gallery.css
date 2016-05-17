@@ -1,0 +1,25 @@
+/* gallery.css */
+
+.images{
+    width: 100%;
+}
+
+.images img{
+    max-width: 100%;
+    /*height: auto;
+    width: auto; for IE8 */
+    
+    -moz-transition: all 0.8s;
+    -webkit-transition: all 0.8s; /* webkit is for safari */
+    transition: all 1.3s;
+}
+
+.images img:hover{
+    /*align-content: center;
+    width: 400px;
+    height: 400px;*/
+    
+    -moz-transform: scale(2.0);
+    -webkit-transform: scale(2.0); /* webkit is for safari */
+    transform: scale(2.0);
+}
