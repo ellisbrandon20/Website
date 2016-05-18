@@ -8,7 +8,6 @@ ideas for webpage:
 
 -Gallery
 	> ADD MORE PHOTOS
-	> FIND a way to do SCROLLING FEATURE so don’t have to scroll through entire page
 	> have php code write html code for all of my pics
 	> have upload button to add more pics to database
     
