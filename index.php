@@ -7,27 +7,30 @@
 		<title> Brandon Ellis E-Portfolio Home</title>
         <link rel="icon" type="image/png" href="/pics/title_icon.png">
 		<link rel="stylesheet" type="text/css" href="style2.css">
-        <div class="header">
+ 
+        
+	</head>
+
+	<body>
+        
+             <div class="header">
             <div class = "headerBreak"></div>
             <div class="headerContent">
                 <center><img src="/pics/header_2.png" alt="Header image" title="header image"></center>
-                <!--<hr width="500" />-->
                 <div class = "nav">
                     <?php include('includes/nav.php');?>
                 </div>
             </div>
             <div class = "headerBreak2"></div>
         </div>
-	</head>
-
-	<body>
-
+        
+        
         <div class = "body">
             <div class = "outercontainer">
             
             <br><br>
              
-            <center><img src="/pics/index_me.png" alt="Picture of Me" style="width:400px;height:400px"></center>
+            <center><img src="/pics/index_me.png" alt="Picture of Me" style="max-width:100%"></center>
 
     		<center><h2> Howdy! </h2></center>
                 <div class = "innercontainer">
@@ -78,5 +81,6 @@
             
 		  <!-- end footer -->
 	</body>
+    <div class = "headerBreak2"></div>
 </hmtl>
         

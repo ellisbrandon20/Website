@@ -7,7 +7,12 @@
 		<title> Brandon Ellis E-Portfolio Resume</title>
         <link rel="icon" type="image/png" href="/pics/title_icon.png">
 		<link rel="stylesheet" type="text/css" href="style2.css">
-	<div class = "header">
+		
+    </head>
+            
+            
+    <body>
+    <div class = "header">
         <div class="headerBreak"></div>
         <div class = "headerContent">
             <center><img src="/pics/header_2_cook_book.png" alt="Cook Book Header image" title="Resume Header image"</center>
@@ -16,11 +21,9 @@
             </div>
         </div>
         <div class = "headerBreak2"></div>
-    </div>	
-    </head>
-            
-            
-    <body>
+    </div>    
+        
+        
     <div class="body">
         
         <p>IN WORKING PROGRESS! COMING SOON</p>
