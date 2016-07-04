@@ -1,3 +1,6 @@
+<?php
+    include('includes/assets.php');
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -8,14 +11,8 @@
         <div class="headerBreak"></div>
         <div class = "headerContent">
             <center><img src="/pics/header_2_resume.png" alt="Resume Header image" title="Resume Header image"</center>
-            <div class="nav">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/resume.html">Resume</a></li>
-                    <li><a href="/gallery.html">Gallery</a></li>
-                      <!-- <li><a href="brandon-ellis.net/cook_book.php">Cook Book</a></li> -->
-                    <li><a href="/cook_book.html">Cook Book</a></li>
-                </ul>
+           <div class = "nav">
+                <?php include('includes/nav.php');?>
             </div>
         </div>
         <div class = "headerBreak2"></div>

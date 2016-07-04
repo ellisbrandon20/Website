@@ -1,3 +1,6 @@
+<?php
+    include('includes/assets.php');
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -10,13 +13,7 @@
                 <center><img src="/pics/header_2.png" alt="Header image" title="header image"></center>
                 <!--<hr width="500" />-->
                 <div class = "nav">
-                  <ul>
-                     <li><a href = "/index.html">Home</a></li>
-                     <li><a href = "/resume.html">Resume</a></li>
-                     <li><a href = "/gallery.html">Gallery</a></li>
-                      <!-- <li><a href="/cook_book.php">Cook Book</a></li> -->
-                     <li><a href = "/cook_book.html">Cook Book</a></li>
-                  </ul>
+                    <?php include('includes/nav.php');?>
                 </div>
             </div>
             <div class = "headerBreak2"></div>
