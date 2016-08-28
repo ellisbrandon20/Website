@@ -72,38 +72,38 @@
             <b><font size = "5">Images</font></b>
             <table>
                 <tr>
-                    <td><img id = "pic01" src = "/data/Gallery/kylefield.JPG" alt="Kyle Field"></td>
-                    <td><img id = "pic02" src = "/data/Gallery/pjandi.jpg" alt = "Pj and I at Game"></td>
-                    <td><img id = "pic03" src = "/data/Gallery/dog.jpg" alt = "a random puppy"></td>
+                    <td><img id = "pic01" src = "/cgi-bin/Gallery/kylefield.JPG" alt="Kyle Field"></td>
+                    <td><img id = "pic02" src = "/cgi-bin/Gallery/pjandi.jpg" alt = "Pj and I at Game"></td>
+                    <td><img id = "pic03" src = "/cgi-bin/Gallery/dog.jpg" alt = "a random puppy"></td>
                 </tr>
                 <tr>
-                    <td><img id = "pic04" src = "/data/Gallery/Java_coding.png" alt = "Java coding"></td>
-                    <td><img id = "pic05" src = "/data/Gallery/winning.png" alt = "I was so close"></td>
-                    <td><img id = "pic06" src = "/data/Gallery/friends.jpg" alt = "friends and I playing pool"></td>
+                    <td><img id = "pic04" src = "/cgi-bin/Gallery/Java_coding.png" alt = "Java coding"></td>
+                    <td><img id = "pic05" src = "/cgi-bin/Gallery/winning.png" alt = "I was so close"></td>
+                    <td><img id = "pic06" src = "/cgi-bin/Gallery/friends.jpg" alt = "friends and I playing pool"></td>
                 </tr>
                 <tr>
-                    <td><img id = "pic07" src = "/data/Gallery/rotaract.jpg" alt = "rotaract friends"></td>
-                    <td><img id = "pic08" src = "/data/Gallery/codingpractice.png" alt = "practicing my coding skills"></td>
-                    <td><img id = "pic09" src = "/data/Gallery/cruise01.jpg" alt = "cruise ship fun"></td>
+                    <td><img id = "pic07" src = "/cgi-bin/Gallery/rotaract.jpg" alt = "rotaract friends"></td>
+                    <td><img id = "pic08" src = "/cgi-bin/Gallery/codingpractice.png" alt = "practicing my coding skills"></td>
+                    <td><img id = "pic09" src = "/cgi-bin/Gallery/cruise01.jpg" alt = "cruise ship fun"></td>
                 </tr>
                 <tr>
-                    <td><img id = "pic10" src = "/data/Gallery/cruise02.jpg" alt = "cruise ship fun"></td>
-                    <td><img id = "pic11" src = "/data/Gallery/aggiefootball.jpg" alt = "football game with rachel"></td>
-                    <td><img id = "pic12" src = "/data/Gallery/grilling01.jpg" alt = "grilling bacon wrapped chicken"></td>
+                    <td><img id = "pic10" src = "/cgi-bin/Gallery/cruise02.jpg" alt = "cruise ship fun"></td>
+                    <td><img id = "pic11" src = "/cgi-bin/Gallery/aggiefootball.jpg" alt = "football game with rachel"></td>
+                    <td><img id = "pic12" src = "/cgi-bin/Gallery/grilling01.jpg" alt = "grilling bacon wrapped chicken"></td>
                 </tr>
                 <tr>
-                    <td><img id = "pic13" src = "/data/Gallery/finals01.jpg" alt = "prepping for finals while sleeping"></td>
-                    <td><img id = "pic14" src = "/data/Gallery/firstapps.png" alt = "first apps on iOS"></td>
-                    <td><img id = "pic15" src = "/data/Gallery/aggierings01.jpg" alt = "ordered aggie ring"></td>
+                    <td><img id = "pic13" src = "/cgi-bin/Gallery/finals01.jpg" alt = "prepping for finals while sleeping"></td>
+                    <td><img id = "pic14" src = "/cgi-bin/Gallery/firstapps.png" alt = "first apps on iOS"></td>
+                    <td><img id = "pic15" src = "/cgi-bin/Gallery/aggierings01.jpg" alt = "ordered aggie ring"></td>
                 </tr>
                 <tr>
-                    <td><img id = "pic16" src = "/data/Gallery/aggiering02.jpg" alt = "Ordered aggie ring"></td>
-                    <td><img id = "pic17" src = "/data/Gallery/codingESPN.jpg" alt = "homework and espn"></td>
-                    <td><img id = "pic18" src = "/data/Gallery/UPEvolunteer.jpg" alt = "UPE BIG EVENT"></td>
+                    <td><img id = "pic16" src = "/cgi-bin/Gallery/aggiering02.jpg" alt = "Ordered aggie ring"></td>
+                    <td><img id = "pic17" src = "/cgi-bin/Gallery/codingESPN.jpg" alt = "homework and espn"></td>
+                    <td><img id = "pic18" src = "/cgi-bin/Gallery/UPEvolunteer.jpg" alt = "UPE BIG EVENT"></td>
                 </tr>
                 <tr>
-                    <td><img id = "pic19" src = "/data/Gallery/aggiering03.jpg" alt = "getting my ring"></td>
-                    <td><img id = "pic20" src = "/data/Gallery/315code.jpg" alt = "coding for 315 multiplayer game"></td>
+                    <td><img id = "pic19" src = "/cgi-bin/Gallery/aggiering03.jpg" alt = "getting my ring"></td>
+                    <td><img id = "pic20" src = "/cgi-bin/Gallery/315code.jpg" alt = "coding for 315 multiplayer game"></td>
                     
                 </tr>
             </table>
@@ -115,67 +115,67 @@
             <b><font size = "5">Images</font></b>
             <div class = "gallery">
                 <div class="img-container">
-                    <img id = "pic01" src = "../data/Gallery/kylefield.JPG" alt="Kyle Field">
+                    <img id = "pic01" src = "../cgi-bin/Gallery/kylefield.JPG" alt="Kyle Field">
                 </div>
                 <div class="img-container">
-                    <img id = "pic02" src = "../data/Gallery/pjandi.jpg" alt = "Pj and I at Game">
+                    <img id = "pic02" src = "../cgi-bin/Gallery/pjandi.jpg" alt = "Pj and I at Game">
                 </div>
                 <div class="img-container">
-                    <img id = "pic03" src = "../data/Gallery/dog.jpg" alt = "a random puppy">
+                    <img id = "pic03" src = "../cgi-bin/Gallery/dog.jpg" alt = "a random puppy">
                 </div>
                 <div class="img-container">
-                    <img id = "pic04" src = "../data/Gallery/Java_coding.png" alt = "Java coding">
+                    <img id = "pic04" src = "../cgi-bin/Gallery/Java_coding.png" alt = "Java coding">
                 </div>
                 <div class="img-container">
-                    <img id = "pic05" src = "../data/Gallery/winning.png" alt = "I was so close">
+                    <img id = "pic05" src = "../cgi-bin/Gallery/winning.png" alt = "I was so close">
                 </div>
                 <div class="img-container">
-                    <img id = "pic06" src = "../data/Gallery/friends.jpg" alt = "friends and I playing pool">
+                    <img id = "pic06" src = "../cgi-bin/Gallery/friends.jpg" alt = "friends and I playing pool">
                 </div>
                 <div class="img-container">
-                    <img id = "pic07" src = "../data/Gallery/rotaract.jpg" alt = "rotaract friends">
+                    <img id = "pic07" src = "../cgi-bin/Gallery/rotaract.jpg" alt = "rotaract friends">
                 </div>
                 <div class="img-container">
-                    <img id = "pic08" src = "../data/Gallery/codingpractice.png" alt = "practicing my coding skills">
+                    <img id = "pic08" src = "../cgi-bin/Gallery/codingpractice.png" alt = "practicing my coding skills">
                 </div>
                 <div class="img-container">
-                    <img id = "pic09" src = "../data/Gallery/cruise01.jpg" alt = "cruise ship fun">
+                    <img id = "pic09" src = "../cgi-bin/Gallery/cruise01.jpg" alt = "cruise ship fun">
                 </div>
                 <div class="img-container">
-                    <img id = "pic10" src = "../data/Gallery/cruise02.jpg" alt = "cruise ship fun">
+                    <img id = "pic10" src = "../cgi-bin/Gallery/cruise02.jpg" alt = "cruise ship fun">
                 </div>
                 <div class="img-container">
-                    <img id = "pic11" src = "../data/Gallery/aggiefootball.jpg" alt = "football game with rachel">
+                    <img id = "pic11" src = "../cgi-bin/Gallery/aggiefootball.jpg" alt = "football game with rachel">
                 </div>
                 <div class="img-container">
-                    <img id = "pic12" src = "../data/Gallery/grilling01.jpg" alt = "grilling bacon wrapped chicken">
+                    <img id = "pic12" src = "../cgi-bin/Gallery/grilling01.jpg" alt = "grilling bacon wrapped chicken">
                 </div>
                 <div class="img-container">
-                    <img id = "pic13" src = "../data/Gallery/finals01.jpg" alt = "prepping for finals while sleeping">
+                    <img id = "pic13" src = "../cgi-bin/Gallery/finals01.jpg" alt = "prepping for finals while sleeping">
                 </div>
                 <div class="img-container">
-                    <img id = "pic14" src = "../data/Gallery/firstapps.png" alt = "first apps on iOS">
+                    <img id = "pic14" src = "../cgi-bin/Gallery/firstapps.png" alt = "first apps on iOS">
                 </div>
                 <div class="img-container">
-                    <img id = "pic15" src = "../data/Gallery/aggierings01.jpg" alt = "ordered aggie ring">
+                    <img id = "pic15" src = "../cgi-bin/Gallery/aggierings01.jpg" alt = "ordered aggie ring">
                 </div>
                 <div class="img-container">
-                    <img id = "pic16" src = "../data/Gallery/aggiering02.jpg" alt = "Ordered aggie ring">
+                    <img id = "pic16" src = "../cgi-bin/Gallery/aggiering02.jpg" alt = "Ordered aggie ring">
                 </div>
                 <div class="img-container">
-                    <img id = "pic17" src = "../data/Gallery/codingESPN.jpg" alt = "homework and espn">
+                    <img id = "pic17" src = "../cgi-bin/Gallery/codingESPN.jpg" alt = "homework and espn">
                 </div>
                 <div class="img-container">
-                    <img id = "pic18" src = "../data/Gallery/UPEvolunteer.jpg" alt = "UPE BIG EVENT">
+                    <img id = "pic18" src = "../cgi-bin/Gallery/UPEvolunteer.jpg" alt = "UPE BIG EVENT">
                 </div>
                 <div class="img-container">  
-                    <img id = "pic19" src = "../data/Gallery/aggiering03.jpg" alt = "getting my ring">
+                    <img id = "pic19" src = "../cgi-bin/Gallery/aggiering03.jpg" alt = "getting my ring">
                 </div>
                 <div class="img-container">
-                    <img id = "pic20" src = "../data/Gallery/315code.jpg" alt = "coding for 315 multiplayer game">
+                    <img id = "pic20" src = "../cgi-bin/Gallery/315code.jpg" alt = "coding for 315 multiplayer game">
                 </div> 
             </div>
-                
+            
             <!--footer -->
             <div class = "footer">
                  <hr width="500"/>

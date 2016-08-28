@@ -132,13 +132,12 @@
             </p>
 -->
 
-
-            <iframe class="resumeDoc" src="https://docs.google.com/document/d/1-EbmnrrNNYzQqWqsHBsMZjxEeGEQYUYahO9OmSYOm-I/pub?embedded=true"></iframe>
-
+            <iframe class="resumeDoc" src="../data/Resume_Ellis_Brandon_Summer_2016.pdf" width="100%" height="100%"></iframe>
 
             <!--footer -->
             <div class = "footer">
                  <hr width="500"/>
+<!--                <center><div style="width:100px;height:25px;border:1px solid #000;">Contact Me</div></center>-->
             </div>
             <!-- end footer -->
         </div>
