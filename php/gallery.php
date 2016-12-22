@@ -319,9 +319,3 @@
         </div>        
     </body>
 </hmtl>
-      
-<script>
-function openResumePDF() {
-    location.href = "http://brandon-ellis.net/data/Resume_Ellis_Brandon_Summer_2016.pdf";
-}
-</script>
