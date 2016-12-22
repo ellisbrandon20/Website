@@ -1,0 +1,49 @@
+/* nav bar css */
+
+.navbar{
+    margin-bottom: 0px;
+}
+.navbar-default{
+    background-color: #bd3a3a;
+    border-color: #cf6363;
+}
+
+.navbar-default .navbar-brand{
+    color: #fff;
+}
+.navbar-default .navbar-brand:hover{
+    color: #a6a6a6;
+}
+.navbar-default .navbar-nav > li > a{
+    color: #fff;
+}
+.navbar-default .navbar-nav > li > a:hover{
+/*    background-color: #8c0e0e;*/
+/*    background-color: #ddd;*/
+    color: #a6a6a6;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus{
+    background-color: #8c0e0e;
+    color: #ddd;
+}
+.navbar-default .navbar-nav>.active>a:hover{
+    background-color: #8c0e0e;
+    color: #a6a6a6;
+}
+/* outline for mobile menu button*/
+.navbar-default .navbar-toggle {
+  border-color: #ddd;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #8c0e0e !important;
+}
+/* icon-bar lines for mobile menu button*/
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ddd;
+}
+/* line separator between nav bar and drop down menu for mobile devices*/
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #8c0e0e;
+}

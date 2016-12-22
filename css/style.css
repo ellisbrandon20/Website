@@ -1,0 +1,22 @@
+/* style css - applies to all pages*/
+
+.header-img{
+    background-color: #e3e3e3;
+    margin-top:3.5em;
+}
+
+.body-content{
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    background-color: #f2f2f2;
+}
+
+.bgcolor{
+    background-color: #e3e3e3;
+    
+}
+
+hr.double-line {
+    width: auto;
+	border-top: 20px double #d9d9d9;
+}

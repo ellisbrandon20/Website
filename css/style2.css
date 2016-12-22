@@ -30,12 +30,12 @@
     height: 0;
     border-bottom: 4px solid #bd3a3a;
 }
-
+/*
 .nav {
     margin-top: 0px;
     height: 42px;
     background: #bd3a3a;
-    /*makes the nav bar stay on the top*/
+    /*makes the nav bar stay on the top
     position: fixed;
     top: 0;
     width:100%;
@@ -59,8 +59,21 @@
 }
 .nav ul li a:hover{
     background: #8c0e0e;
-    /*color: white;*/
+    /*color: white;
 }
+*/
+
+
+/*
+.navbar-container{
+    background: #bd3a3a;
+}
+
+.navbar-nav a{
+    color: white;
+}
+*/
+
 
 .body {
     margin-top: 5%;
