@@ -120,184 +120,184 @@
                 <!-- image gallery -->
                 <div class="row">
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="img-thumbnail img-square">
                             <a href="../data/Gallery/kylefield.JPG" target="_blank">
-                                <img class="img-responsive" src="../data/Gallery/kylefield.JPG" alt="Kyle Field" style="width:100%">
+                                <img class="img-responsive img-gallery" src="../data/Gallery/kylefield.JPG" alt="Kyle Field">
                             </a>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="img-thumbnail img-square">
                             <a href="../data/Gallery/pjandi.jpg" target="_blank">
-                                <img class="img-responsive" src="../data/Gallery/pjandi.jpg" alt="Pj and I" style="width:100%">
+                                <img class="img-responsive img-gallery" src="../data/Gallery/pjandi.jpg" alt="Pj and I">
                             </a>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail img-square">
                             <a href="../data/Gallery/dog.jpg" target="_blank">
-                                <img class="img-responsive" src="../data/Gallery/dog.jpg" alt="pet store" style="width:100%">
+                                <img class="img-responsive img-gallery" src="../data/Gallery/dog.jpg" alt="pet store">
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail img-square">
                             <a href="../data/Gallery/Java_coding.png" target="_blank">
-                                <img class="img-responsive" src="../data/Gallery/Java_coding.png" alt="java code" style="width:100%">
+                                <img class="img-responsive img-gallery" src="../data/Gallery/Java_coding.png" alt="java code">
                             </a>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail img-square">
                             <a href="../data/Gallery/winning.png" target="_blank">
-                                <img class="img-responsive" src="../data/Gallery/winning.png" alt="Almost won" style="width:100%">
+                                <img class="img-responsive img-gallery" src="../data/Gallery/winning.png" alt="Almost won">
                             </a>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail img-square">
                             <a href="../data/Gallery/friends.jpg" target="_blank">
-                                <img class="img-responsive" src="../data/Gallery/friends.jpg" alt="friends" style="width:100%">
+                                <img class="img-responsive img-gallery" src="../data/Gallery/friends.jpg" alt="friends">
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail img-square">
                             <a href="../data/Gallery/rotaract.jpg" target="_blank">
-                                <img class="img-responsive" src="../data/Gallery/rotaract.jpg" alt="rotaract" style="width:100%">
+                                <img class="img-responsive img-gallery" src="../data/Gallery/rotaract.jpg" alt="rotaract" style="width:100%">
                             </a>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail img-square">
                             <a href="../data/Gallery/codingpractice.png" target="_blank">
-                                <img class="img-responsive" src="../data/Gallery/codingpractice.png" alt="coding practice" style="width:100%">
+                                <img class="img-responsive img-gallery" src="../data/Gallery/codingpractice.png" alt="coding practice" style="width:100%">
                             </a>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail img-square">
                             <a href="../data/Gallery/cruise01.jpg" target="_blank">
-                                <img class="img-responsive" src="../data/Gallery/cruise01.jpg" alt="cruise ship" style="width:100%">
+                                <img class="img-responsive img-gallery" src="../data/Gallery/cruise01.jpg" alt="cruise ship" style="width:100%">
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail img-square">
                             <a href="../data/Gallery/cruise02.jpg" target="_blank">
-                                <img class="img-responsive" src="../data/Gallery/cruise02.jpg" alt="cruise ship 2" style="width:100%">
+                                <img class="img-responsive img-gallery" src="../data/Gallery/cruise02.jpg" alt="cruise ship 2" style="width:100%">
                             </a>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail img-square">
                             <a href="../data/Gallery/aggiefootball.jpg" target="_blank">
-                                <img class="img-responsive" src="../data/Gallery/aggiefootball.jpg" alt="aggie football" style="width:100%">
+                                <img class="img-responsive img-gallery" src="../data/Gallery/aggiefootball.jpg" alt="aggie football" style="width:100%">
                             </a>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail img-square">
                             <a href="../data/Gallery/grilling01.jpg" target="_blank">
-                                <img class="img-responsive" src="../data/Gallery/grilling01.jpg" alt="bacon wrapped chicken" style="width:100%">
+                                <img class="img-responsive img-gallery" src="../data/Gallery/grilling01.jpg" alt="bacon wrapped chicken" style="width:100%">
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail img-square">
                             <a href="../data/Gallery/finals01.jpg" target="_blank">
-                                <img class="img-responsive" src="../data/Gallery/finals01.jpg" alt="finals" style="width:100%">
+                                <img class="img-responsive img-gallery" src="../data/Gallery/finals01.jpg" alt="finals" style="width:100%">
                             </a>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail img-square">
                             <a href="../data/Gallery/firstapps.png" target="_blank">
-                                <img class="img-responsive" src="../data/Gallery/firstapps.png" alt="first ios apps" style="width:100%">
+                                <img class="img-responsive img-gallery" src="../data/Gallery/firstapps.png" alt="first ios apps" style="width:100%">
                             </a>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail img-square">
                             <a href="../data/Gallery/aggierings01.jpg" target="_blank">
-                                <img class="img-responsive" src="../data/Gallery/aggierings01.jpg" alt="aggie ring order" style="width:100%">
+                                <img class="img-responsive img-gallery" src="../data/Gallery/aggierings01.jpg" alt="aggie ring order" style="width:100%">
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail img-square">
                             <a href="../data/Gallery/aggiering02.jpg" target="_blank">
-                                <img class="img-responsive" src="../data/Gallery/aggiering02.jpg" alt="ordered aggie ring" style="width:100%">
+                                <img class="img-responsive img-gallery" src="../data/Gallery/aggiering02.jpg" alt="ordered aggie ring" style="width:100%">
                             </a>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail img-square">
                             <a href="../data/Gallery/codingESPN.jpg" target="_blank">
-                                <img class="img-responsive" src="../data/Gallery/codingESPN.jpg" alt="espn and coding" style="width:100%">
+                                <img class="img-responsive img-gallery" src="../data/Gallery/codingESPN.jpg" alt="espn and coding" style="width:100%">
                             </a>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail img-square">
                             <a href="../data/Gallery/UPEvolunteer.jpg" target="_blank">
-                                <img class="img-responsive" src="../data/Gallery/UPEvolunteer.jpg" alt="UPE Big event" style="width:100%">
+                                <img class="img-responsive img-gallery" src="../data/Gallery/UPEvolunteer.jpg" alt="UPE Big event" style="width:100%">
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail img-square">
                             <a href="../data/Gallery/aggiering03.jpg" target="_blank">
-                                <img class="img-responsive" src="../data/Gallery/aggiering03.jpg" alt="getting aggie ring" style="width:100%">
+                                <img class="img-responsive img-gallery" src="../data/Gallery/aggiering03.jpg" alt="getting aggie ring" style="width:100%">
                             </a>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail img-square">
                             <a href="../data/Gallery/315code.jpg" target="_blank">
-                                <img class="img-responsive" src="../data/Gallery/315code.jpg" alt="multiplayer game project" style="width:100%">
+                                <img class="img-responsive img-gallery" src="../data/Gallery/315code.jpg" alt="multiplayer game project" style="width:100%">
                             </a>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail img-square">
                             <a href="../data/Gallery/UPEvolunteer.jpg" target="_blank">
-                                <img class="img-responsive" src="../data/Gallery/UPEvolunteer.jpg" alt="UPE Big event" style="width:100%">
+                                <img class="img-responsive img-gallery" src="../data/Gallery/UPEvolunteer.jpg" alt="UPE Big event" style="width:100%">
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail img-square">
                             <a href="../data/Gallery/me_goldengate.jpg" target="_blank">
-                                <img class="img-responsive" src="../data/Gallery/me_goldengate.jpg" alt="me at golden gate bridge" style="width:100%">
+                                <img class="img-responsive img-gallery" src="../data/Gallery/me_goldengate.jpg" alt="me at golden gate bridge" style="width:100%">
                             </a>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail img-square">
                             <a href="../data/Gallery/touringSF.jpg" target="_blank">
-                                <img class="img-responsive" src="../data/Gallery/touringSF.jpg" alt="Rachel and I in SF" style="width:100%">
+                                <img class="img-responsive img-gallery" src="../data/Gallery/touringSF.jpg" alt="Rachel and I in SF" style="width:100%">
                             </a>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="thumbnail">
+                        <div class="thumbnail img-square">
                             <a href="../data/Gallery/Yosemite.jpg" target="_blank">
-                                <img class="img-responsive" src="../data/Gallery/Yosemite.jpg" alt="Yosemite" style="width:100%">
+                                <img class="img-responsive img-gallery" src="../data/Gallery/Yosemite.jpg" alt="Yosemite" style="width:100%">
                             </a>
                         </div>
                     </div>

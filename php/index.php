@@ -38,10 +38,10 @@
                 <div class="collapse navbar-collapse" id="myNavbar">            
                     <ul class="nav navbar-nav">
                         <?php //include('../includes/nav.php');?>
-                        <li><a href="/php/index.php">Home</a></li>
+                        <li class="active"><a href="/php/index.php">Home</a></li>
                         <li><a href="/php/resume.php">Resume</a></li>
                         <li><a href="/php/gallery.php">Gallery</a></li>
-                        <li class="active"><a href="/php/projects.php">Projects</a></li>
+                        <li><a href="/php/projects.php">Projects</a></li>
                     </ul>
                 </div>
             </div>
