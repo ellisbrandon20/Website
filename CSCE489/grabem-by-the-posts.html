@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/templatemo-style.css">
+<!--
+Puzzle Template
+http://www.templatemo.com/tm-477-puzzle
+-->
+    <title>Grab 'em by the "Posts"</title>
+</head>
+
+<body>
+    <div class="fixed-header">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="#">Grab 'em by the "Posts"</a>
+            </div>
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="#home">Introduction</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                    <li><a href="#motivation">Motivation</a></li>
+                    <li><a href='#raw'>Data</a></li>
+                    <!--<li><a href='#turk'>Turk</a></li> -->
+                    <li><a href='#classifier'>Classifier</a></li>
+                    <li><a href='#analysis'>Analysis</a></li>
+                    <li><a href='#video'>Video</a></li>
+                    <li><a class="external" href="https://github.com/ellisbrandon20/csce489-DataScience-FinalProject" target="_blank">GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+    
+    <div class="container">
+
+        <!-- INTRODUCTION -->
+        <section class="col-md-12 content" id="home">
+
+           <div class="col-lg-8 col-md-8 content-item background">
+              <h2 class="main-title text-center dark-blue-text">INTRODUCTION</h2>
+               <p class="section-text"> Howdy! Welcome to our Computer Science 489 - Data Science Final Project! This year's presidential election was one of the most debated and controversial elections in the history of the United States of America. The U.S. has numerous news media outlets all reporting on the same event or events, but with a small twist. Different news medias will reach out to different types of people when reporting the news. Some outlets will speak out to the more republican audience, some the more democratic audience, and some report in a more neutral view. So viewers are asking themselves, which outlet do they want to listen to in the future? And does the news change depending on the source?</p>
+               <p class="section-text"> With all of this in mind, we wanted to question if these news outlets report with bias, and if this bias changes depending on events that occur. For example, the email scandal with Hillary Clinton. Were news outlets reporting just the facts, or were they changing what they say to appeal to their desired audience.</p>
+           </div>
+
+           <div class="col-lg-4 col-md-4 content-item content-item-1 background">
+               <!-- <h2 class="main-title text-center dark-blue-text">News Outlets</h2> -->
+               <br><br><br><br><br><br>
+               <h2 class="section-title" align="center">News Outlets</h2>
+
+                <section class="col-lg-12 row" id="home" style="padding-top:0;">
+                  <img src="images/cnn_logo.png" alt="" class="col-lg-6 col-md-6" style="">
+                  <img src="images/nyt_logo.png" alt="" class="col-lg-6 col-md-6" style="">
+                </section>
+
+                <section class="col-lg-12 row" id="home" style="padding-top:0;">
+                  <img src="images/msnbc_logo.png" alt="" class="col-lg-6 col-md-6" style="">
+                  <img src="images/foxnews_logo.png" alt="" class="col-lg-6 col-md-6" style="">
+                </section>
+
+                <section class="col-lg-12 row" id="home" style="padding-top:0;">
+                  <img src="images/cbs_logo.png" alt="" class="col-lg-6 col-md-6" style="">
+                  <img src="images/usatoday_logo.png" alt="" class="col-lg-6 col-md-6" style="">
+                </section>
+
+                <section class="col-lg-12 row" id="home" style="padding-top:0;">
+                  <img src="images/wsj_logo.png" alt="" class="col-lg-offset-3 col-md-offset-3" style="">
+                </section>
+           </div>
+
+       </section>
+
+
+       <!-- CONCLUSION PART 1-->
+       <section class="col-md-12 content padding" id="conclusion">
+        <div class="col-lg-12 col-md-12 content-item background flexbox">
+           <h2 class="section-title">Conclusion</h2>
+           <p class="section-text">In short, our analysis concludes that media bias does in fact exist. As seen in the differences between news sources over time, all media outlets have an inherent bias in their reporting, but there are many conditions to this conclusion. Because our labelling was based on human input (Amazon Turk), our classifiers were trained on bias inherently present in the population. In fact, a better statement may be: “Does media have a perceived bias?” Nonetheless, with one of the most controversial elections in the United States finally over, it is obvious that the media did not report all stories with complete neutrality. However, everything can’t all be blamed on the media. While our graphs were very asymmetrical in the beginning, potentially because of a scarcity in data, most news outlets reported stories in a similar fashion later in the race. In fact, the most important factor in determining how a news source reports appears to be not any inherent bias, but the actions of the candidates themselves. From Clinton’s email scandal to Trump’s “grab ‘em by the p***y”, the actual news had the most effect on the labelling of the posts. So whether you blame the candidates or the media, the only thing most of us can agree on is we’re glad this election is over. </p>
+        </div>
+
+        </section>
+
+
+       <section class="col-md-12 content padding" id="conclusion">
+       <!-- Jared's Timeline --> 
+          <div class="col-lg-12 col-md-12 content-item background flexbox">
+            <h2 class="section-title">Bias Over Time</h2>
+          <p> In the these graphs, every news source is given a bias score of 0 to 1. The bias score is calculated by taking the average of every post’s sentiment, where positive is 1, neutral is 0.5, and negative is 0. Therefore, a bias score of 0.5 would indicate neutrality, above 0.5 indicates favorable bias, and below 0.5 indicates unfavorable bias. </p>
+          </div>
+        </section>
+
+
+        <!-- CONCLUSION PART 2-->
+       <section class="col-md-12 content padding" id="conclusion">
+       <!-- Jared's Timeline --> 
+        <figure>
+                 <embed type="image/svg+xml" src="dataviz/timelines/timeline_pos_neu_neg_trump.svg" />
+        </figure>
+
+       </section>
+
+
+
+       <!-- CONCLUSION PART 3-->
+       <section class="col-md-12 content padding" id="conclusion">
+       <!-- Jared's Timeline --> 
+        <figure>
+                 <embed type="image/svg+xml" src="dataviz/timelines/timeline_pos_neu_neg_clinton.svg" />
+        </figure>
+
+       </section>
+
+        
+
+
+         <!-- BACKGROUND & MOTIVATION -->
+         <section class="col-md-12 content" id="motivation">
+             <!-- <div class="col-lg-6 col-md-6 content-item">
+                 <img src="images/3.jpg" alt="Image" class="tm-image">
+             </div> -->
+             <div class="col-lg-12 col-md-12 content-item background flexbox">
+                 <h2 class="section-title">Background & Motivation</h2>
+                 <br>
+                 <p> Like we previously mentioned, the presidential election of 2016 is the most debated and controversial one in the history of the US. The topic of media bias has come up several times during the campaign season. Media tends to be viewed much more during the campaign season and some news stations are known for leaning to one side or the other. A large portion of the population claim the media is biased, while another portion claims that it isn't.</p>
+
+             </div>
+         </section>
+
+
+         <!-- RAW DATA PART 1 -->
+         <section class="col-md-12 content" id="raw">
+             <div class="col-lg-12 col-md-12 content-item background flexbox">
+                 <h2 class="section-title">Raw Data</h2>
+                 <p>After grabbing all 22,000 posts from Facebook, we wanted to analyze it by looking at a few different things. We saw knew that the candidates we covered disproportionately, so we looked into how much each news outlet talked about Trump, Clinton, or Other. In the graph “Number of Posts per News Outlet”, you can clearly see that across all news outlets Trump is the most talked about between the 3 categories. To distinguish what posts fell into each category, we followed the following guidelines. If the post mentions only about Trump, it is a Trump post. If the post mentions only about Clinton, it is a Clinton post. If the post mentions both Trump and Clinton, or mentions anything related to our subject (election, president, etc.) it is classified as an Other post. Lastly, we wanted to observe the distribution of Trump and Clinton posts between each new outlet.</p>
+
+             </div>
+         </section>
+
+
+         <!-- RAW DATA PART 2-->
+         <section class="col-md-12 content" id="raw">
+             <div class="col-lg-12 col-md-12 content-item background flexbox">
+                <figure>
+                   <embed type="image/svg+xml" src="dataviz/bar_graphs/total_posts_per_source.svg" />
+                 </figure>
+             </div>
+         </section>
+
+         <!-- RAW DATA PART 3-->
+         <section class="col-md-12 content" id="raw">
+             <div class="col-lg-12 col-md-12 content-item background flexbox">
+                <figure>
+                   <embed type="image/svg+xml" src="dataviz/pie_charts/total_posts_pie.svg" />
+                 </figure>
+             </div>
+         </section>
+
+         <!-- RAW DATA PART 4-->
+         <section class="col-md-12 content" id="raw">
+             <div class="col-lg-6 col-md-6 content-item background flexbox">
+                <figure>
+                   <embed type="image/svg+xml" src="dataviz/pie_charts/pie_post_distribution_trump.svg" />
+                 </figure>
+             </div>
+
+             <div class="col-lg-6 col-md-6 content-item background flexbox">
+                <figure>
+                   <embed type="image/svg+xml" src="dataviz/pie_charts/pie_post_distribution_clinton.svg" />
+                 </figure>
+             </div>
+         </section>
+
+
+         <!-- TURK DATA -->
+         <section class="col-md-12 content" id="turk">
+             <div class="col-lg-6 col-md-6 content-item background flexbox">
+                <h2 class="section-title">Turk Data</h2>
+                 <p class="section-text"> Because of the nature of what was studied, opinions about labels varied significantly. For our labels, we had each post reviewed by 3 turkers and removed any results where all turkers disagreed. As shown in the pie chart, only 39.6% of turkers had a uniform consensus on the bias of a post, while 2 out of the 3 agreed on 53.93% of them. Getting turkers to label our posts with an unbiased opinion is a difficult task, especially when some labeled over 100. We were however able to deny turkers that tried to spam our dataset by removing bogus input (e.g. turkers who labeled everything as positive).</p>
+              </div>
+
+             <div class="col-lg-6 col-md-6 content-item background flexbox">
+                <figure>
+                   <embed type="image/svg+xml" src="dataviz/pie_charts/turk_agreement_pie.svg" />
+                 </figure>
+             </div>
+         </section>
+
+
+        <!-- CLASSIFIER -->
+        <section class="col-md-12 content" id="classifier">
+             <div class="col-lg-12 col-md-12 content-item background flexbox">
+                <h2 class="section-title" align="center">Classifier</h2>
+                 <p class="section-text" align="center">Our original classifier began by trying to predict a posts label out of three values: positive, neutral, and negative. But no matter what was done, the accuracy never rose above 55%. In order to combat this, we moved to a classifier that focused on predicting just two different labels: positive and negative. This classifier was able to correctly predict labels with an accuracy of 76.7%, but forced the assumption that every post contained bias. Because of this, we came out with two different classifiers that excelled at telling two different stories. Because the first classifier allowed for neutral posts, it shows a more mild progression of bias with few changes. But with the second classifier, it is much easier to see the variation of bias during small time frames, like when significant events occurred.</p>
+              </div>
+         </section>
+
+         <section class="col-md-12 content" id="classifier">
+             <div class="col-lg-6 col-md-6 content-item background flexbox">
+              <figure>
+                   <embed type="image/svg+xml" src="dataviz/pie_charts/trump_classifier_accuracy_pie.svg" />
+                 </figure>
+              </div>
+
+              <div class="col-lg-6 col-md-6 content-item background flexbox">
+              <p align="center"> When classifying with three labels, more than base accuracy matters. In these pie charts, we display how often the classifier guessed correctly, how often it was off by one (e.g. guessed neutral when post was positive), and how many times it was completely wrong (e.g. guessed negative when post was positive). With this in mind, we build these charts to show the accuracy of our Trump, Clinton, and other classifiers. Note, classification was done with Naive Bayes. </p>
+              </div>
+
+
+         </section>
+
+         <section class="col-md-12 content" id="classifier">
+              <div class="col-lg-6 col-md-6 content-item background flexbox">
+              <figure>
+                   <embed type="image/svg+xml" src="dataviz/pie_charts/clinton_classifier_accuracy_pie.svg" />
+                 </figure>
+              </div>
+
+             <div class="col-lg-6 col-md-6 content-item background flexbox">
+              <figure>
+                   <embed type="image/svg+xml" src="dataviz/pie_charts/other_classifier_accuracy_pie.svg" />
+                 </figure>
+              </div>
+
+         </section>
+
+
+
+         <!-- ANALYSIS PART 1-->
+        <section class="col-md-12 content" id="analysis">
+             <div class="col-lg-12 col-md-12 content-item background flexbox">
+              <h2 class="section-title" align="center">Analysis</h2>
+              <br><br>
+                <h2 class="section-title">Timeline</h2>
+                 <p class="section-text">By observing both timeline charts, “% of Negative Posts about Trump/Clinton”, it's evident the data points are sporadic throughout the first six to seven months. On the latter half of the timeline, it shows that the news outlets are generally posting in the same direction (negative vs positive), but with a slight difference in the degree. This is likely happening because there are multiple candidates for both the Republican and Democratic party at the start of the campaign season, and in the latter half, candidates started to drop out. So in the last few months, the posts become more about Trump or Clinton because of their high probability to win the Republican and Democratic nomination respectively. This inevitably caused a greater number of posts fall in the positive or negative category over time. </p>
+                <p>These charts point out a time frame to dig deeper into the data set and discover why there was a sudden shift from relatively positive posts to negative posts, and vice versa. For example, in the Clinton timeline, we are able to see that from June to July 2016, she is receiving more positive posts than before. However, from August to October 2016, some event occurred that resulted in the media reporting in a more negative tone. Trump’s ratings improved after the Republican National Convention and received more positive votes than the previous month.</p>
+              </div>
+         </section>
+
+         <section class="col-md-12 content" id="analysis">
+             <div class="col-lg-12 col-md-12 content-item background flexbox">
+                <figure>
+                   <embed type="image/svg+xml" src="dataviz/timelines/timeline_neg_trump.svg" />
+                 </figure>
+              </div>
+         </section>
+
+         <section class="col-md-12 content" id="analysis">
+             <div class="col-lg-12 col-md-12 content-item background flexbox">
+                <figure>
+                   <embed type="image/svg+xml" src="dataviz/timelines/timeline_neg_clinton.svg" />
+                 </figure>
+              </div>
+         </section>
+
+
+         <!-- WORD CLOUD 1-->
+
+         <section class="col-md-12 content" id="word_cloud">
+             <div class="col-lg-6 col-md-6 content-item background flexbox">
+                 <img src="dataviz/word_clouds/wordcloud_grabem_both_10-07_10-14.png" alt="Image" class="tm-image" style="width:550px;height:475px;">
+             </div>
+
+             <div class="col-lg-6 col-md-6 content-item background flexbox">
+                 <h2 class="section-title">Grab 'Em</h2>
+                 <p> During Donald Trump’s “grab ‘em by the p***y” scandal, issues about women's rights became extremely relevant, and it shows in the way the media reported it. With some of the most frequent words being, ‘women’, ‘lewd’, ‘sexual’, and ‘tape’, it is apparent the media focused heavily on the scandal at hand. The only difference between this controversy and the Hillary Clinton’s emails was that in Trump’s case, all media outlets reported negatively towards him. </p>
+             </div>
+         </section>
+
+
+         <section class="col-md-12 content" id="word_cloud">
+             <div class="col-lg-12 col-md-12 content-item background flexbox">
+                <figure>
+                   <embed type="image/svg+xml" src="dataviz/timelines/wordcloud_grab_timeline_pos.svg" />
+                 </figure>
+              </div>
+         </section>
+
+
+
+         <!-- WORD CLOUD 2-->
+
+         <section class="col-md-12 content" id="word_cloud">
+
+            <div class="col-lg-6 col-md-6 content-item background flexbox">
+                 <h2 class="section-title">Email</h2>
+                 <p> Hillary Clinton’s email scandal was undoubtedly one of the most talked about events of the election, and it shows in the way it was reported by the media. In the wordcloud, you will notice the most common words during this time frame (Sept. 1 - 13) were ‘email’, ‘FBI’, ‘server’, and ‘pneumonia’. While one may assume all news sources would report negatively about Clinton during this time, a completely different story unfolded. Some coverage took a sharp decline, while other news outlets had an increase in positive posts, revealing a potential compromise for the sudden leak of bad news. The only certainty is that the email scandal served to separate the reporting bias of the news outlets instead of uniting them behind a specific case. </p>
+             </div>
+
+             <div class="col-lg-6 col-md-6 content-item background flexbox">
+                 <img src="dataviz/word_clouds/wordcloud_01_email_clinton_09-01_09-13.png" alt="Image" class="tm-image" style="width:500px;height:450px;">
+             </div>
+
+         </section>
+
+         <section class="col-md-12 content" id="word_cloud">
+             <div class="col-lg-12 col-md-12 content-item background flexbox">
+                <figure>
+                   <embed type="image/svg+xml" src="dataviz/timelines/wordcloud_email_timeline_pos.svg" />
+                 </figure>
+              </div>
+         </section>
+
+
+         <!-- WORD CLOUD 3-->
+         <section class="col-md-12 content" id="word_cloud">
+          <div class="col-lg-6 col-md-6 content-item background flexbox">
+            <h2 class="section-title" align="center">Republican National Convention</h2>
+                 <img src="dataviz/word_clouds/wordcloud_rnc_both_07-17_07-22.png" alt="Image" class="tm-image" style="width:500px;height:450px;">
+          </div>
+
+          <div class="col-lg-6 col-md-6 content-item background flexbox">
+            <h2 class="section-title" align="center">Democratic National Convention</h2>
+                 <img src="dataviz/word_clouds/wordcloud_dnc_both_07-24_07-29.png" alt="Image" class="tm-image" style="width:500px;height:450px;">
+          </div>
+         </section>
+
+        <section class="col-md-12 content" id="word_cloud">
+            <div class="col-lg-12 col-md-12 content-item background flexbox">
+              <h2 class="section-title" align="center">Conventions</h2>
+                 <p align="center"> The word clouds from the DNC and RNC do a good job of showing the trending issues at the time. For the RNC, controversy arose over Melania Trump’s speech. The three most frequent words are ‘Melania’, ‘Obama’, and ‘speech’; all of which relate to the accusation of Melania Trump stealing Michelle Obama’s speech. During the DNC, the word cloud seems to suggest that Clinton spent a majority of the time defending her email scandal. The word ‘speech’’s prevalence might be a side effect of the event or carried over from the RNC controversy. </p>
+            </div>
+         </section>
+
+
+         <!-- TAKEAWAYS & CONSIDERATIONS --> 
+         <section class="col-md-12 content" id="word_cloud">
+            <div class="col-lg-12 col-md-12 content-item background flexbox">
+              <h2 class="section-title" align="center">Takeaways & Considerations</h2>
+                 <p align="center"> During this project, we began with Twitter as our original data source, but changed to Facebook when we found out Twitter’s API restrictions only allowed us to grab 3200 tweets per source. For Amazon Turk, we made sure to filter out any spammers, but this task was made more difficult due to bias in the turkers. When building classifiers we originally struggled with getting a good accuracy, but were able to fix this problem when classifying with only two labels. </p>
+
+                <p align="center">Things that we would suggest to anyone that tries to recreate this project is to try and use something other than Amazon Turk to get your initial labels for training data. We believe that the turker results may have affected our classifier and its performance in accuracy. </p>
+
+            </div>
+         </section>
+
+
+         <!-- VIDEO -->
+         <section class="col-md-12 content" id="video">
+            <div class="col-lg-12 col-md-12 content-item background flexbox">
+              <p align="center">
+                <iframe width="840" height="630" src="https://www.youtube.com/embed/yidA-sBjFF4" frameborder="0" allowfullscreen></iframe>
+              </p>
+            </div>
+         </section>
+
+
+<div class="text-center footer">
+	<div class="container">
+
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.singlePageNav.min.js"></script>
+
+<script>
+
+// Check scroll position and add/remove background to navbar
+function checkScrollPosition() {
+    if($(window).scrollTop() > 50) {
+      $(".fixed-header").addClass("scroll");
+  } else {        
+      $(".fixed-header").removeClass("scroll");
+  }
+}
+
+$(document).ready(function () {   
+    // Single page nav
+    $('.fixed-header').singlePageNav({
+        offset: 59,
+        filter: ':not(.external)',
+        updateHash: true        
+    });
+
+    checkScrollPosition();
+
+    // nav bar
+    $('.navbar-toggle').click(function(){
+        $('.main-menu').toggleClass('show');
+    });
+
+    $('.main-menu a').click(function(){
+        $('.main-menu').removeClass('show');
+    });
+});
+
+$(window).on("scroll", function() {
+    checkScrollPosition();    
+});
+</script>
+</body>
+</html>
