@@ -1,39 +1,6 @@
 <?php
     include('../includes/assets.php');
-
-
-
-    $username = $password = "";
-    
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (empty($_POST["username"])) {
-           $usernsme = "Name is required";
-        } else {
-            $username = $_POST["username"];
-        }
-        if (empty($_POST["password"])) {
-            $password = "Password is required";
-        } else {
-            $password = $_POST["password"];
-        }
-    }
-    
-    // might have to change servername for production use
-    $servername = "localhost";
-    $dbname = "cookbook_db";
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check connection
-    if ($conn->connect_error) {
-        // USE LINE BELOW FOR PRODUCTION USE
-        //header( 'Location: http://www.brandon-ellis.net/php/cook_book_login.php?login_error=1' );
-        // USE LINE BELOW FOR DEVELOPMENT USE
-        header('Location: http://localhost:8888/php/cook_book_login.php?login_error=1');
-    } 
 ?>
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -71,7 +38,8 @@
                         <li><a href="/php/index.php">Home</a></li>
                         <li><a href="/php/resume.php">Resume</a></li>
                         <li><a href="/php/gallery.php">Gallery</a></li>
-                        <li class="active"><a href="/php/projects.php">Projects</a></li>
+                        <li><a href="/php/projects.php">Projects</a></li>
+                        <li class="active"><a href="/php/cook_book_login.php">Cookbook</a></li>
                     </ul>
                 </div>
             </div>
@@ -85,11 +53,17 @@
 
             <div class="container body-content">
                     <?php
+                        $nameErr = $passwordErr = "";
+                
                         $servername = "localhost";
-                        $username = "cookbook_db";
-//                        $password = "Cookbookpassword";
-//                        $dbname = "cookbook_db";
-//
+                        //$username = "cookbook_db";
+                        //$password = "Cookbookpassword";
+                        $dbname = "cookbook_db";
+                        $username = "";
+                        $password = "";
+//                
+//                
+//                
 //                        // Create connection
 //                        $conn = new mysqli($servername, $username, $password, $dbname);
 //
@@ -99,27 +73,42 @@
 //                        } 
 //                        echo "Connected successfully";
 //                        
-//                        echo "<br>";
-//                
-//                
-//                        $sql = "SELECT * FROM my_cookbook";
-//                        $result = $conn->query($sql);
-//                
-//                        if ($result->num_rows > 0) {
-//                            // output data of each row
-//                            while($row = $result->fetch_assoc()) {
-//                                //echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
-//                                echo "recipe: " . $row["recipe"] . " - category: " . $row["category"] . " - cooktime: " . $row["cooktime"] . " - ingredients: " . $row["ingredients"] . " - instructions " . $row["instructions"] . " - picture: " . $row["picture"];
-//                            }
-//                        } else {
-//                            echo "0 results";
-//                        }
-//                
 //                
 //                        // done automatically
 //                        $conn->close();
+                
                     ?>
-            </div>
+                    
+            <!--                        create a form-->
+                <?php 
+                    if (isset($_GET['login_error'])) { 
+                        if($_GET['login_error'] == 1){
+                            echo "<div class=\"row\"><div class=\"col-sm-7\"><p class=\"error\" style=\"font-size:1.15em;\">Invalid Username and/or Password<span class=\"glyphicon glyphicon-exclamation-sign\"/></p></div></div>";
+                        }
+                    }
+                ?>
+                
+                
+                <form method="post" action="cook_book.php"> 
+                    <div class="form-group row">
+                        <label for="text-input" class="col-xs-2 col-form-label">Username</label>
+                        <div class="col-sm-6">
+                            <input class="form-control" type="text" name="username" id="text-input">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="password-input" class="col-xs-2 col-form-label">Password</label>
+                        <div class="col-sm-6">
+                            <input class="form-control" type="password" name="password" id="password-input">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-8">
+                            <input type="submit" name="submit" value="Login" class="btn btn-primary pull-right"/>
+                        </div>
+                    </div>
+                </form>
+                
                 
                 
                 
