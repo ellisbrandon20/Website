@@ -1,8 +1,5 @@
 <?php
     include('../includes/assets.php');
-
-
-
     $username = $password = "";
     
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -17,7 +14,23 @@
             $password = $_POST["password"];
         }
     }
-    
+
+
+
+
+
+
+
+
+
+
+    // ********************* DELETE *************************
+
+    $username = "cookbook_db";
+    $password = "Cookbookpassword";
+
+
+
     // might have to change servername for production use
     $servername = "localhost";
     $dbname = "cookbook_db";
@@ -84,42 +97,116 @@
             </div>
 
             <div class="container body-content">
-                    <?php
-                        $servername = "localhost";
-                        $username = "cookbook_db";
-//                        $password = "Cookbookpassword";
-//                        $dbname = "cookbook_db";
-//
-//                        // Create connection
-//                        $conn = new mysqli($servername, $username, $password, $dbname);
-//
-//                        // Check connection
-//                        if ($conn->connect_error) {
-//                            die("Connection failed: " . $conn->connect_error);
-//                        } 
-//                        echo "Connected successfully";
-//                        
-//                        echo "<br>";
-//                
-//                
-//                        $sql = "SELECT * FROM my_cookbook";
-//                        $result = $conn->query($sql);
-//                
-//                        if ($result->num_rows > 0) {
-//                            // output data of each row
-//                            while($row = $result->fetch_assoc()) {
-//                                //echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
-//                                echo "recipe: " . $row["recipe"] . " - category: " . $row["category"] . " - cooktime: " . $row["cooktime"] . " - ingredients: " . $row["ingredients"] . " - instructions " . $row["instructions"] . " - picture: " . $row["picture"];
-//                            }
-//                        } else {
-//                            echo "0 results";
-//                        }
-//                
-//                
-//                        // done automatically
-//                        $conn->close();
-                    ?>
-            </div>
+                    
+                
+                <?php
+                    class Recipe{
+                        function Recipe(){
+                            $this->name = "";
+                            $this->category = "";
+                            $this->cooktime = "";
+                            $this->ingredients = "";
+                            $this->instructions = "";
+                            $this->pic_file = "";
+                        }
+                    }
+                ?>
+                
+                
+                
+                
+                <!-- ******************************** -->
+                <!-- *********** edit_cook_book.php load it in on button using AJAX ************ -->
+                <!-- ******************************** -->
+                <form>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="thumbnail img-square">
+                            <img class="img-responsive" src="" id="edit_recipe_img" width="350" height="350">
+                        </div>
+                        <form action="upload.php" method="post" enctype="multipart/form-data">
+                            Select image to upload:
+                            <input type="file" name="fileToUpload" id="fileToUpload">
+                            <input type="submit" value="Upload Image" name="submit" style="">
+                        </form>
+                    </div>
+                    <div class="col-sm-8">
+                        <br>
+                        <div class="row">
+                            <!-- name -->
+                            <div class="form-group">
+                                <div class="col-sm-2">
+                                    <label for="recipe_name">Recipe Name</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="email" class="form-control" id="recipe_name" placeholder="Recipe Name">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <!-- category(s) -->
+                            <div class="col-sm-2">
+                                    <label for="category">Category(s)</label>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="category1" value="option1"> Chicken
+                                </label>
+                                <label class="form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="category2" value="option2"> Beef
+                                </label>
+                                <label class="form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="category3" value="option3"> Pork
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <!-- cooktime -->
+                            <div class="form-group">
+                                    <label for="cooktime-input" class="col-xs-2 col-form-label">Time</label>
+                                <div class="col-sm-3">
+                                    <input class="form-control" type="text" placeholder="000:00:00" 
+                                           defaultValue="000:00:00" id="cooktime-input" onkeyup="showCooktime(this.value)">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <!-- ingredients -->
+                            <div class="form-group">
+                                <div class="col-sm-2">
+                                    <label for="ingredients_input">Ingredients:</label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" id="ingredients_input" rows="5" placeholder="Ingredients"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <!-- instructions -->
+                            <div class="form-group">
+                                <div class="col-sm-2">
+                                    <label for="instructions_input">Instructions:</label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" id="instructions_input" rows="10" placeholder="Instructions"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </form>
+                <script>
+                    function showCooktime(str){
+
+                    }
+                </script>
+                
+                <!-- ******************************** -->
+            
                 
                 
                 
@@ -140,3 +227,24 @@
     </body>
 
 </html>
+
+
+<?php
+                        
+//                        $sql = "SELECT * FROM my_cookbook";
+//                        $result = $conn->query($sql);
+//                
+//                        if ($result->num_rows > 0) {
+//                            // output data of each row
+//                            while($row = $result->fetch_assoc()) {
+//                                //echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+//                                echo "recipe: " . $row["recipe"] . " - category: " . $row["category"] . " - cooktime: " . $row["cooktime"] . " - ingredients: " . $row["ingredients"] . " - instructions " . $row["instructions"] . " - picture: " . $row["picture"];
+//                            }
+//                        } else {
+//                            echo "0 results";
+//                        }
+//                
+//                
+//                        // done automatically
+//                        $conn->close();
+                    ?>
