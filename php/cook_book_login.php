@@ -56,8 +56,6 @@
                         $nameErr = $passwordErr = "";
                 
                         $servername = "localhost";
-                        //$username = "cookbook_db";
-                        //$password = "Cookbookpassword";
                         $dbname = "cookbook_db";
                         $username = "";
                         $password = "";
@@ -108,8 +106,6 @@
                         </div>
                     </div>
                 </form>
-                
-                
                 
                 
                 <!-- footer -->

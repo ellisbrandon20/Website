@@ -1,8 +1,8 @@
 <?php
     include('../includes/assets.php');
     $username = $password = "";
-    
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // get login criteria
         if (empty($_POST["username"])) {
            $usernsme = "Name is required";
         } else {
@@ -14,26 +14,14 @@
             $password = $_POST["password"];
         }
     }
-
-
-
-
-
-
-
-
-
-
-    // ********************* DELETE *************************
-
-    $username = "cookbook_db";
-    $password = "Cookbookpassword";
-
-
-
     // might have to change servername for production use
     $servername = "localhost";
     $dbname = "cookbook_db";
+    $tblname = "my_cookbook";
+    // ********************* DELETE *************************
+    $username = "cookbook_db";
+    $password = "Cookbookpassword";
+    // **********************************************
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -45,6 +33,98 @@
         // USE LINE BELOW FOR DEVELOPMENT USE
         header('Location: http://localhost:8888/php/cook_book_login.php?login_error=1');
     } 
+    
+     class Recipe implements JsonSerializable{
+        function __construct(){
+            $this->name = "";
+            $this->category = "";
+            $this->cooktime = "";
+            $this->ingredients = "";
+            $this->instructions = "";
+            $this->pic_file = "";
+        }
+        
+        public function jsonSerialize () {
+            return array(
+                'name'=>$this->name,
+                'category'=>$this->category,
+                'cooktime'=>$this->cooktime,
+                'ingredients'=>$this->ingredients,
+                'instructions'=>$this->instructions,
+                'pic_file'=>$this->pic_file
+            );
+        }
+        
+        public function json_to_object($data) {
+            foreach ($data AS $key => $value) $this->{$key} = $value;
+        }
+    }
+    
+    class searchRecipe{
+        function __construct(){
+            $this->name = "";
+            $this->category = "";
+            $this->cooktimeOperator = "";
+            $this->cooktime = "";
+            $this->SQL = "";
+        }
+        function createSQL(){
+            $where_flag = $name_flag = $category_flag = false;
+            $sql = "SELECT * FROM `" . $GLOBALS['tblname'] . "`";
+            if(!empty($this->name)){
+                $sql .= " WHERE `recipe` LIKE '%" . $this->name . "%'";
+                $where_flag = true;
+            }
+            if(!empty($this->category)){
+                if($where_flag){
+                    $sql .= " AND";
+                } else{
+                    $sql .= " WHERE";
+                    $where_flag = true;
+                }
+                $sql .= " `category` = '" . $this->category . "'";
+            }
+            if(!empty($this->cooktime)){
+                if($where_flag){
+                    $sql .= " AND";
+                } else {
+                    $sql .= " WHERE";
+                    $where_flag = true;
+                }
+                $sql .= " `cooktime` " . $this->cooktimeOperator . "'" . $this->cooktime . "'";
+            }
+            $this->SQL = $sql;
+        }
+    }
+    
+
+    $recipe_flag = 0;
+    if ($_SERVER["REQUEST_METHOD"] == "POST") { 
+        // get search criteria
+        if($_POST["page_form"] == "searchRecipe"){
+            $searchRecipe = new searchRecipe();
+            if (!empty($_POST["recipeName"])) {
+                $searchRecipe->name = $_POST["recipeName"];
+            }
+            if (!empty($_POST["category"])) {
+               $searchRecipe->category = $_POST["category"];
+            }
+            if (!empty($_POST["cooktimeOperator"])) {
+               $searchRecipe->cooktimeOperator = $_POST["cooktimeOperator"];
+            }
+            if (!empty($_POST["cooktime"])) {
+               $searchRecipe->cooktime = $_POST["cooktime"];
+            }
+            // construct the SQL string
+            $searchRecipe->createSQL();
+        }
+        
+        $result = $conn->query($searchRecipe->SQL);
+        $recipe_flag = 1;
+    }
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -59,6 +139,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <script src="../js/cook_book.js"></script>
         <link rel="stylesheet" type="text/css" href="/css/navbar.css">
         <link rel="stylesheet" type="text/css" href="/css/style.css">
 		
@@ -84,7 +166,8 @@
                         <li><a href="/php/index.php">Home</a></li>
                         <li><a href="/php/resume.php">Resume</a></li>
                         <li><a href="/php/gallery.php">Gallery</a></li>
-                        <li class="active"><a href="/php/projects.php">Projects</a></li>
+                        <li><a href="/php/projects.php">Projects</a></li>
+                        <li class="active"><a href="/php/projects.php">Cookbook</a></li>
                     </ul>
                 </div>
             </div>
@@ -96,116 +179,100 @@
                 <center><img class="img-responsive" src="/pics/header_2_cook_book.png" alt="Header image" width="800" height="200"></center>
             </div>
 
-            <div class="container body-content">
+            <div class="container body-content">        
+                
+                <div id="recipeContent">
+                    <button class="btn btn-primary" id="create">Create Recipe</button>
+                    <button class="btn btn-primary" id="edit">Edit Recipe</button>
+                    <button class="btn btn-primary" id="search">Search Recipe</button>
                     
-                
-                <?php
-                    class Recipe{
-                        function Recipe(){
-                            $this->name = "";
-                            $this->category = "";
-                            $this->cooktime = "";
-                            $this->ingredients = "";
-                            $this->instructions = "";
-                            $this->pic_file = "";
-                        }
-                    }
-                ?>
-                
-                
-                
-                
-                <!-- ******************************** -->
-                <!-- *********** edit_cook_book.php load it in on button using AJAX ************ -->
-                <!-- ******************************** -->
-                <form>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="thumbnail img-square">
-                            <img class="img-responsive" src="" id="edit_recipe_img" width="350" height="350">
-                        </div>
-                        <form action="upload.php" method="post" enctype="multipart/form-data">
-                            Select image to upload:
-                            <input type="file" name="fileToUpload" id="fileToUpload">
-                            <input type="submit" value="Upload Image" name="submit" style="">
-                        </form>
+                    <!-- search for recipe and load it -->
+                    <div id="searchRecipe">
+                        
                     </div>
-                    <div class="col-sm-8">
-                        <br>
-                        <div class="row">
-                            <!-- name -->
-                            <div class="form-group">
-                                <div class="col-sm-2">
-                                    <label for="recipe_name">Recipe Name</label>
-                                </div>
-                                <div class="col-sm-6">
-                                    <input type="email" class="form-control" id="recipe_name" placeholder="Recipe Name">
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <!-- category(s) -->
-                            <div class="col-sm-2">
-                                    <label for="category">Category(s)</label>
-                            </div>
-                            <div class="col-sm-6">
-                                <label class="form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="category1" value="option1"> Chicken
-                                </label>
-                                <label class="form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="category2" value="option2"> Beef
-                                </label>
-                                <label class="form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="category3" value="option3"> Pork
-                                </label>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <!-- cooktime -->
-                            <div class="form-group">
-                                    <label for="cooktime-input" class="col-xs-2 col-form-label">Time</label>
-                                <div class="col-sm-3">
-                                    <input class="form-control" type="text" placeholder="000:00:00" 
-                                           defaultValue="000:00:00" id="cooktime-input" onkeyup="showCooktime(this.value)">
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <!-- ingredients -->
-                            <div class="form-group">
-                                <div class="col-sm-2">
-                                    <label for="ingredients_input">Ingredients:</label>
-                                </div>
-                                <div class="col-sm-10">
-                                    <textarea class="form-control" id="ingredients_input" rows="5" placeholder="Ingredients"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <!-- instructions -->
-                            <div class="form-group">
-                                <div class="col-sm-2">
-                                    <label for="instructions_input">Instructions:</label>
-                                </div>
-                                <div class="col-sm-10">
-                                    <textarea class="form-control" id="instructions_input" rows="10" placeholder="Instructions"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
-                </form>
-                <script>
-                    function showCooktime(str){
-
-                    }
-                </script>
+                <div id="sql-search">
+                    <?php
+                        if(isset($searchRecipe)){
+                            echo "<br>sql - " . $searchRecipe->SQL . "<br>";
+                            echo "<br>SQL Results<br>";
+                            
+                            
+                        if ($result->num_rows > 0) {
+                            
+                            if($result->num_rows == 1){
+                                //echo "<script>alert('1 result');</script>";
+                                $data = $result->fetch_assoc();
+                                $recipe = new Recipe();
+                                $recipe->name = $data["recipe"];
+                                $recipe->category = $data["category"];
+                                $recipe->cooktime = $data["cooktime"];
+                                $recipe->ingredients = $data["ingredients"];
+                                $recipe->instructions = $data["instructions"];
+                                $recipe->pic_file = $data["picture"];
+                                
+                                $json_recipe = json_encode($recipe);
+                                
+                                //echo "<script>alert('".$json_recipe."');</script>";
+                                echo "<script>
+                                    $(document).ready(function(){
+                                        $(\"#searchRecipe\").load('http://localhost:8888/php/cook_book_helper/view_recipe.php', ".$json_recipe.");
+                                    });
+                                </script>";
+                            }
+                            else{
+                                // output data of each row
+                                echo "<div class=\"table-responsive\"><table class=\"table table-striped\" id=\"query-results\">";
+                                echo "<thead><tr><th>Recipe</th><th>Category</th><th>Cooktime</th><th>Ingredients</th></tr></thead>";
+                                while($row = $result->fetch_assoc()) {
+                                    //echo "recipe: " . $row["recipe"] . " - category: " . $row["category"] . " - cooktime: " . $row["cooktime"] . " - ingredients: " . $row["ingredients"] . " - instructions " . $row["instructions"] . " - picture: " . $row["picture"];
+                                    echo "<tr>";
+                                    echo "<td>" . $row["recipe"] . "</td>";
+                                    echo "<td>" . $row["category"] . "</td>";
+                                    echo "<td>" . $row["cooktime"] . "</td>";
+                                    echo "<td>" . $row["ingredients"] . "</td>";
+                                    echo "</tr>";
+                                }
+                                echo "</table></div>";
+                            }
+                        } else {
+                            echo "0 results";
+                        }
                 
-                <!-- ******************************** -->
+                            
+                        }
+                        else{
+                            echo "searchRecipe NOT SET";
+                        }
+                    ?>
+                </div>
+                
+                <script>
+                    $(document).ready(function(){
+                        if(!<?php echo $recipe_flag; ?>)
+                            $("#searchRecipe").load('http://localhost:8888/php/cook_book_helper/search_recipe.php');
+                        
+                        $("#create").click(function(){
+                            $("#recipeContent").load('http://localhost:8888/php/cook_book_helper/create_recipe.php');
+                        });
+                        $("#edit").click(function(){
+                            $("#recipeContent").load('http://localhost:8888/php/cook_book_helper/create_recipe.php');
+                        });
+                        $("#search").click(function(){
+                            $("#searchRecipe").load('http://localhost:8888/php/cook_book_helper/search_recipe.php');
+                        });
+                        $("#submitSearch").click(function(){
+                            $("#searchRecipe").load('http://localhost:8888/php/cook_book_helper/view_recipe.php');
+                        });
+                    });
+                    
+                    function loadRecipe(){
+//                        alert('here');
+//                        $("#searchRecipe").load('http://localhost:8888/php/cook_book_helper/view_recipe.php');
+//                        alert('theres');
+                    };
+                </script>
             
                 
                 
@@ -244,6 +311,15 @@
 //                            echo "0 results";
 //                        }
 //                
+//                 if ($result->num_rows > 0) {
+//                            // output data of each row
+//                            while($row = $result->fetch_assoc()) {
+//                                //echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+//                                echo "recipe: " . $row["recipe"] . " - category: " . $row["category"] . " - cooktime: " . $row["cooktime"] . " - ingredients: " . $row["ingredients"] . " - instructions " . $row["instructions"] . " - picture: " . $row["picture"];
+//                            }
+//                        } else {
+//                            echo "0 results";
+//                        }
 //                
 //                        // done automatically
 //                        $conn->close();
